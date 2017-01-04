@@ -21,13 +21,19 @@
     <module>webapp</module>
   </modules>
 
-<distributionManagement>
-   <snapshotRepository>
-      <id>nexus-snapshots</id>
-      <url>http://192.168.80.129:8081/content/repositories/snapshots</url>
-   </snapshotRepository>
-</distributionManagement>
-
+  <distributionManagement>
+    <repository>
+      <id>nexus</id>
+      <name>Releases</name>
+      <url>http://192.168.80.129:8081/repository/maven-releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>nexus</id>
+      <name>Snapshot</name>
+      <url>http://192.168.80.129:8081/repository/maven-snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+  
   <build>
     <plugins>
       <plugin>
